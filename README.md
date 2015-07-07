@@ -24,6 +24,7 @@ Downloads, discussion, and patches are still welcome!
 ## Overview
 
 This sets the system up in a way that will maximally utilize the iptables native types.  Works with EL6 and EL7.
+To be as safe as possible, this module will only apply changes in one 'flush' call.  This is to avoid issues where individual rules would be applied prior to an entire ruleset, potentially harming the integrity of the system. 
 
 ## This is a SIMP module
 This module is a component of the [https://github.com/NationalSecurityAgency/SIMP](System Integrity Management Platform), a managed security compliance framework built on Puppet.
